@@ -1,0 +1,32 @@
+version: '2'
+services:
+  rails_benkyokai_app:
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rails_benkyokai_app_db
+    container_name: rails_benkyokai_app
+    environment:
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD:
+      DATABASE_PORT: 5432
+      DATABASE_HOST: rails_benkyokai_app_db
+
+# postgres ------------------------------------------
+  rails_benkyokai_app_db-data:
+    image: busybox
+    volumes:
+        - /var/lib/postgresql/data
+    container_name: rails_benkyokai_app_db-data
+
+  rails_benkyokai_app_db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    container_name: rails_benkyokai_app_db
+    volumes_from:
+        - rails_benkyokai_app_db-data
