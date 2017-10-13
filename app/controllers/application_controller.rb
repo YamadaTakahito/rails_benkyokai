@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-
   def adana
     after = [
       "ぽん",
@@ -147,5 +146,10 @@ class ApplicationController < ActionController::Base
 
     @adana = before[Random.rand(0..before.length)] + params[:name] +after[Random.rand(0..after.length)]
     render template: "adana/index"
+  end
+
+  def konitiwa
+    @name = params[:name]
+    render template: "konitiwa/index"
   end
 end

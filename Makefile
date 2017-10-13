@@ -2,6 +2,7 @@ dev:
 	docker-compose up -d
 	docker exec rails_benkyokai_app rails db:create
 	docker exec rails_benkyokai_app rails db:migrate
+	docker exec rails_benkyokai_app rails db:seed
 	docker exec -it rails_benkyokai_app bash
 
 stop:

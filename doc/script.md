@@ -44,6 +44,62 @@
 
 # なぜサーバーを立てるか
 
+## 理論
+
+- 例えばあだ名を返すrubyプログラムを書いてみるとする。以下のようにして実行する
+
+  `sample/arima.rb`
+
+  ```bash
+  ruby sample/arima.rb 山田
+  ```
+
+- 例えば、100万人のuserに対してあだ名を作ってあげようとすると、100万回上のやつを実行するのは不可能。よってそれぞれのUserが特定のURLにアクセスして、あだ名を返す仕組みを作ればいい
+
+- <http://localhost:3000/adana/なまえ>にアクセスして見よう
+
+- `config/routes.rb`でどのURLに飛んだら、どのコントローラーにアクセスするか決定する。今回の場合は<http://localhost:3000/adana/なまえ>にアクセスすると、`app/controller/application_controller.rb`の`adana`メソッドが実行される
+
+`config/routes.rb`
+
+```ruby
+  get '/adana/:name', to: 'application#adana'
+```
+
+- あだ名を生成し、`@adana`という変数に入れる。`render template: "adana/index"`によって、`app/views/adana/index.html.erb`の規則にしたがったhtmlを表示する。基本的に表示するときは@で始まる変数でないといけない
+
+`app/controller/application.rb`
+
+```ruby
+def adana
+  after = ["ぽん"]
+  before = ["T-"]
+
+  @adana = before[Random.rand(0..before.length)] + params[:name] +after[Random.rand(0..after.length)]
+  render template: "adana/index"
+end
+```
+
+- `@adana`という変数をh1タグで表示する
+
+`app/views/adana/index.html.erb`
+
+```html
+<h1><%= @adana %></h1>
+```
+
+## 演習
+
+- `/konitiwa/<なまえ>`とアクセスすると、`こんにちは<なまえ>さん`と表示されるアプリを作って見よう
+
+# Databaseについて
+
+## Dataの永続化？
+
+- Dataの[永続化](https://ja.wikipedia.org/wiki/%E6%B0%B8%E7%B6%9A%E6%80%A7)とはざっくりいうとどのようにデータを残すか？である。
+
+- SDカードでもURBメモリでもいいのだが、よく用いられるのはDatabaseというものである。[Postico](https://eggerapps.at/postico/)で見てみるとわかる通り、Excel シートみたいなものである。
+
 # ref
 
-1. <http://postd.cc/rails-doctrine/>
+- <http://postd.cc/rails-doctrine/>
