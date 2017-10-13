@@ -100,6 +100,97 @@ end
 
 - SDカードでもURBメモリでもいいのだが、よく用いられるのはDatabaseというものである。[Postico](https://eggerapps.at/postico/)で見てみるとわかる通り、Excel シートみたいなものである。
 
+## SQL
+
+- databaseをいじるには`SQL`というプログラミング言語を用いる。基本の操作のCRADは以下の通り
+
+- create
+
+```sql
+INSERT INTO
+  users
+  (name, mail, created_at, updated_at)
+VALUES
+  ('yamada', 'yamada@asd', '2017-7-4', '2017-5-6');
+```
+
+- get(read)
+
+```sql
+SELECT
+    name, created_at
+FROM
+  users
+WHERE
+    id > 90
+AND
+    id < 100
+;
+```
+
+- update
+
+```sql
+UPDATE
+    users
+SET
+    name = 'Alfred Schmidt',
+    mail= 'Frankfurt'
+WHERE
+    id = 10;
+```
+
+- delete
+
+```sql
+DELETE
+FROM
+    users
+WHERE
+    name='ユーザー10'
+;
+```
+
+## Active Record
+
+- Active RecordとはSQLをrubyのコードっぽく書いたものである
+- railsのlogを見てもわかる通り、結局はSQLに変換される
+- このようなデータベース固有の言語であるSQLを、各言語に対してわかりやすくしたフレームワークをO/R Mapper(Object Relational Mapping)と呼ぶ。railsならActive Record, Djangoならdjango ORM, Go ならGormなどがある。
+- 別にO/R Mapperを使わなくてもデータベースはいじれるけど、ほとんどの人はO/R Mapperを使う。O/R Mappperを使った方がわかりやすいから（超上級者はSQLでかく）
+- 以下のコードを`rails c`で実行して見よう
+- create
+
+```ruby
+@user = User.create(name: "yamada", mail: "yamada@gmail.com")
+```
+
+- get(read)
+
+```ruby
+@user = User.where(name: "yamada")
+```
+
+- updated
+
+```ruby
+User.where(id: 1).update(name: "kato", mail: "jo@gamil.com")
+```
+
+もしくは
+
+```ruby
+@user = User.where(id: 1)
+@user.name = "kato"
+@user.mail = "jo@gmail.com"
+@user.save
+```
+
+- delete
+
+```ruby
+User.where(id: 4).destroy_all
+```
+
 # ref
 
 - <http://postd.cc/rails-doctrine/>
