@@ -130,3 +130,569 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 34ms (Views: 22.2ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4239584063468435220)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4239584063468435220)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4239584063468435220)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171011104054)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "mail" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171011104054"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-13 11:11:37.616096"], ["updated_at", "2017-10-13 11:11:37.616096"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4239584063468435220)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4239584063468435220)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171011104054)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "mail" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171011104054"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-13 15:33:15.998923"], ["updated_at", "2017-10-13 15:33:15.998923"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4239584063468435220)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/adana" for 172.27.0.1 at 2017-10-13 15:40:02 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/adana"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adana" for 172.27.0.1 at 2017-10-13 15:41:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/adana"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:41:07 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/myapp/app/controllers/application_controller.rb:6: dynamic constant assignment
+    NamesAfter =[
+                ^
+/myapp/app/controllers/application_controller.rb:95: dynamic constant assignment
+    NamesBefore =[
+                 ^):
+  
+app/controllers/application_controller.rb:6: dynamic constant assignment
+app/controllers/application_controller.rb:95: dynamic constant assignment
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:41:27 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/myapp/app/controllers/application_controller.rb:6: dynamic constant assignment
+    NamesAfter = [
+                ^
+/myapp/app/controllers/application_controller.rb:95: dynamic constant assignment
+    NamesBefore = [
+                 ^):
+  
+app/controllers/application_controller.rb:6: dynamic constant assignment
+app/controllers/application_controller.rb:95: dynamic constant assignment
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:42:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 444ms (Views: 443.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:43:03 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:43:05 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:43:07 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 85ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:43:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/application_controller.rb:149:in `adana'
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:43:30 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x0056532255e378>):
+  
+app/controllers/application_controller.rb:149:in `adana'
+Started GET "/adana/yamada" for 172.27.0.1 at 2017-10-13 15:45:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"yamada"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 14241ms (Views: 451.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:45:46 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:45:59 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:00 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 100ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:02 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:03 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:05 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:06 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 109ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:08 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:09 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:12 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 123ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:13 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 153ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:34 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:36 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:46:37 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 143ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:47:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:47:26 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:47:27 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:47:28 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 125ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 101ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:12 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:13 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/application_controller.rb:148:in `+'
+app/controllers/application_controller.rb:148:in `adana'
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:17 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:21 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:23 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:24 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:26 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:27 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:28 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:29 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:31 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:32 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:33 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:35 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:37 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:38 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-13 15:48:39 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
