@@ -214,7 +214,7 @@ User.where(id: 1).update(name: "kato", mail: "jo@gamil.com")
 User.where(id: 4).destroy_all
 ```
 
-### User controllerとUser viewerを参考にCRADを行うものを考えて見よう
+### User controllerとUser viewerを参考にCRUDを行うものを考えて見よう
 
 # ref
 
