@@ -2686,3 +2686,109 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 118ms (Views: 106.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-14 05:55:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 477ms (Views: 467.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-14 05:55:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adana/%E3%82%84%E3%81%BE%E3%81%A0" for 172.27.0.1 at 2017-10-14 05:56:23 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#adana as HTML
+  Parameters: {"name"=>"やまだ"}
+Started GET "/users" for 172.27.0.1 at 2017-10-14 06:57:38 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering adana/index.html.erb within layouts/application
+  Rendered adana/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3664951ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 154ms (Views: 116.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users" for 172.27.0.1 at 2017-10-14 06:57:48 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 568ms (Views: 521.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users" for 172.27.0.1 at 2017-10-14 07:01:12 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 99ms (Views: 84.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/new" for 172.27.0.1 at 2017-10-14 07:03:00 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 119ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/create?utf8=%E2%9C%93&user%5Bname%5D=sfddsa&user%5Bmail%5D=dsfasadffasd&commit=Create+User" for 172.27.0.1 at 2017-10-14 07:03:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"sfddsa", "mail"=>"dsfasadffasd"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "mail", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sfddsa"], ["mail", "dsfasadffasd"], ["created_at", "2017-10-14 07:03:20.866242"], ["updated_at", "2017-10-14 07:03:20.866242"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 81.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/110/show" for 172.27.0.1 at 2017-10-14 07:06:06 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"110"}
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 110]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 89ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/120/show" for 172.27.0.1 at 2017-10-14 07:06:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 120]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 160ms (Views: 81.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/200/show" for 172.27.0.1 at 2017-10-14 07:06:23 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"200"}
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 200]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 89ms (Views: 79.3ms | ActiveRecord: 0.3ms)
+
+

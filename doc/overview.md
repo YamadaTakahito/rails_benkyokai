@@ -11,38 +11,21 @@
 
 ## Agenda
 
-### Server Side
+### 基礎
 
-- なぜサーバーを立てるか？
-- HTTP通信
-- JSONについて
+- railsとはフレームワークの一種である
+- railsの設計思想
+- rubyはobject指向である
+- なぜサーバーを立てるか
 
-### Ruby & Rails
+### railsの読み方
 
-- Railsの設計思想
-- 型について（rubyはclassだが）
-- MVCとは
-- rubyはobject指向
-- Modelの作り方・設計方法
-- Active Recordについて
+- route
+- controller
+- viewer
 
 ### Database
 
-- Databaseとは
-- Databaseの設計の方法
+- dataの永続化
 - SQL
-
-### Server Side
-
-- HTTP通信
-- JSONについて
-
-### Ruby & Rails
-
-- MVCとは
-- Modelの作り方・設計方法
-- Active Recordについて
-
-### Database
-
-- Databaseの設計の方法
+- Active Record

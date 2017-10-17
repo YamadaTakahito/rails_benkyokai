@@ -1,24 +1,15 @@
-# README
+# Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- このレポジトリはrailsの初心者用勉強会のレポジトリです
 
-Things you may want to cover:
+# Makefile
 
-* Ruby version
+- `make dev`で立ち上がります
+- `make stop`で終了します
+- `make clean`で綺麗にします
 
-* System dependencies
+# Doc
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `doc/overview.md`に全体像が書いてあります
+- `doc/setup.md`にsetup方法が書いてあります
+- `doc/explanation.md`に簡単な説明が書いてあります
